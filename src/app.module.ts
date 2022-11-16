@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { CoffeesModule } from './coffees/coffees.module';
 import { RootModule } from './root/root.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CoffeeRatingModule } from './coffee-rating/coffee-rating.module';
 @Module({
   imports: [
     CoffeesModule,
@@ -16,6 +17,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       autoLoadEntities: true,
       synchronize: true,
     }),
+    CoffeeRatingModule,
   ],
   controllers: [],
   providers: [],
