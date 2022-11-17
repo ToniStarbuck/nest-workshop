@@ -3,6 +3,7 @@ import { CoffeesModule } from './coffees/coffees.module';
 import { RootModule } from './root/root.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CoffeeRatingModule } from './coffee-rating/coffee-rating.module';
+import { DatabaseModule } from './database/database.module';
 @Module({
   imports: [
     CoffeesModule,
@@ -18,6 +19,7 @@ import { CoffeeRatingModule } from './coffee-rating/coffee-rating.module';
       synchronize: true,
     }),
     CoffeeRatingModule,
+    DatabaseModule,
   ],
   controllers: [],
   providers: [],
